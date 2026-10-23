@@ -133,7 +133,7 @@ export default function Home() {
                   </p>
 
                   <p className="mt-5 text-sm font-bold text-[#17324D]/70">
-                    Computer Vision · CNNs · YOLO
+                    Computer Vision - PyTorch- CNNs - YOLO
                   </p>
 
                   <span className="mt-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-bold">
