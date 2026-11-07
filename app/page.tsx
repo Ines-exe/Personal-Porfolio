@@ -162,6 +162,10 @@ export default function Home() {
                     Java - OOP - Testing
                   </p>
 
+                  <span className="mt-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-bold">
+                    Ongoing course project
+                  </span>
+
                 </article>
 
                 {/* ULTRASONIC MAPPING */}
@@ -183,6 +187,15 @@ export default function Home() {
                   <p className="mt-5 text-sm font-bold text-[#17324D]/70">
                     C++ - Python - UART - Matplotlib
                   </p>
+
+                  <a
+                    href="https://github.com/Ines-exe/ultrasonic-mapping"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-bold transition hover:bg-[#17324D] hover:text-white"
+                  >
+                    View on GitHub
+                  </a>
                 </article>
 
                 {/* AI PANTRY FINDER */}
