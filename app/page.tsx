@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import callPicture from './callFigmaPicture.png';
+import Image from 'next/image';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
+  const [showImages, setShowImages] = useState(false);
 
   return (
     <>
@@ -168,10 +171,56 @@ export default function Home() {
 
                 </article>
 
+                {/* Call-endar */}
+                <article className="rounded-3xl border border-white/60 bg-white/50 p-8 shadow-lg transition duration-200 hover:-translate-y-2 hover:shadow-xl">
+                  <p className="text-sm font-bold uppercase tracking-widest">
+                    02 / Software Engineering
+                  </p>
+
+                  <h3 className="mt-4 text-3xl font-black">
+                    Call-endar
+                  </h3>
+
+                  <p className="mt-3 leading-relaxed">
+                    A cross-platform mobile application designed to 
+                    simplify group call scheduling through private weekly 
+                    availability submissions.
+                  </p>
+
+                  <p className="mt-5 text-sm font-bold text-[#17324D]/70">
+                    React Native - TypeScript - Supabase
+                  </p>
+
+                  <div className="mt-6 flex flex-col items-start gap-2">
+                    <a
+                      href="https://github.com/Ines-exe/WeeklyCallCalendar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-white px-4 py-2 text-sm font-bold transition hover:bg-[#17324D] hover:text-white"
+                    > 
+                      View on GitHub
+                    </a>
+
+                    <button
+                      onClick={() => setShowImages(!showImages)}
+                      className="rounded-full bg-white px-4 py-2 text-sm font-bold transition hover:bg-[#17324D] hover:text-white"
+                    >
+                      {showImages ? 'Hide images' : 'See images'}
+                    </button>
+                  </div>
+
+                  {showImages && (
+                      <div style={{marginTop: '12px'}}>
+                        <Image src={callPicture} alt="Call-endar Preview" style={{width:'100%', height:'auto'}} />
+                      </div>
+                    )}
+
+                </article>
+
                 {/* ULTRASONIC MAPPING */}
                 <article className="rounded-3xl border border-white/60 bg-white/50 p-8 shadow-lg transition duration-200 hover:-translate-y-2 hover:shadow-xl">
                   <p className="text-sm font-bold uppercase tracking-widest">
-                    03 / Hardware
+                    04 / Hardware
                   </p>
 
                   <h3 className="mt-4 text-3xl font-black">
@@ -201,7 +250,7 @@ export default function Home() {
                 {/* AI PANTRY FINDER */}
                 <article className="rounded-3xl border border-white/60 bg-white/50 p-8 shadow-lg transition duration-200 hover:-translate-y-2 hover:shadow-xl md:mt-10">
                   <p className="text-sm font-bold uppercase tracking-widest">
-                    04 / Hackathon
+                    05 / Hackathon
                   </p>
 
                   <h3 className="mt-4 text-3xl font-black">
